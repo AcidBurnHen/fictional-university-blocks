@@ -1,8 +1,18 @@
 {
   "version": 2,
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "color": {
+          "text": "#FFFFFF",
+          "background": "var(--wp--preset--color--primary)"
+        }
+      }
+    }
+  },
   "settings": {
     "color": {
-      "pallete": [
+      "palette": [
         {
           "slug": "primary",
           "color": "#0d3b66",
