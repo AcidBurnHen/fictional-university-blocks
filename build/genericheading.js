@@ -175,8 +175,25 @@ function EditComponent(props) {
   }));
 }
 
-function SaveComponent() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Hello");
+function SaveComponent(props) {
+  function createTagName() {
+    switch (props.attributes.size) {
+      case "large":
+        return "h1";
+
+      case "medium":
+        return "h2";
+
+      case "small":
+        return "h3";
+    }
+  }
+
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+    tagName: createTagName(),
+    value: props.attributes.text,
+    className: `headline headline--${props.attributes.size}`
+  });
 }
 }();
 /******/ })()
